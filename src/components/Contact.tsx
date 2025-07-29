@@ -1,26 +1,18 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Copy } from 'lucide-react'; // Importing necessary icons
+import React, { useState } from "react";
+import { Mail, Github, Linkedin, Twitter, Copy } from "lucide-react";
 
 const Contact = () => {
-  const [copyStatus, setCopyStatus] = useState(''); // State to manage copy feedback
+  const [copyStatus, setCopyStatus] = useState("");
 
   const emailAddress = "your.email@example.com"; // Replace with your actual email
 
   const handleCopyEmail = () => {
-    // Use document.execCommand('copy') as navigator.clipboard.writeText() might not work in some iframe environments
-    const el = document.createElement('textarea');
-    el.value = emailAddress;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-
-    setCopyStatus('Copied!');
-    setTimeout(() => {
-      setCopyStatus('');
-    }, 2000); // Clear feedback after 2 seconds
+    navigator.clipboard.writeText(emailAddress).then(() => {
+      setCopyStatus("Copied!");
+      setTimeout(() => setCopyStatus(""), 2000);
+    });
   };
 
   const socialLinks = [
@@ -30,44 +22,53 @@ const Contact = () => {
   ];
 
   return (
-    <div className='flex flex-col justify-start text-white font-inter'>
-      <h1 className='text-3xl font-bold mb-6'>
-        Contact Me
-      </h1>
-
-      <div className="space-y-6"> {/* Adjusted spacing */}
-        {/* Email Section - Clickable email for copy */}
-        <div className="flex items-center gap-3">
-          <Mail size={24} className="text-neutral-400" />
-          <button
-            onClick={handleCopyEmail}
-            className="flex items-center gap-2 text-lg text-neutral-300 hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-opacity-50 cursor-pointer"
-            aria-label="Click to copy email address"
+    <div className="max-w-md mx-auto px-4 sm:px-0 font-sans text-gray-300">
+      {/* Email Section */}
+      <div className="mb-10 text-center">
+        <button
+          onClick={handleCopyEmail}
+          aria-label="Copy email address to clipboard"
+          className="group inline-flex items-center gap-3 px-6 py-3 bg-neutral-800 border border-neutral-700 rounded-lg shadow-sm
+                     hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+                     transition-colors duration-300 cursor-pointer"
+          type="button"
+        >
+          <Mail size={24} className="text-gray-400 group-hover:text-indigo-400 transition-colors duration-300" />
+          <span className="text-lg font-medium text-white select-text">{emailAddress}</span>
+          <Copy size={20} className="text-gray-400 group-hover:text-indigo-400 transition-colors duration-300" />
+        </button>
+        {copyStatus && (
+          <p
+            className="mt-2 text-sm text-indigo-400 font-semibold"
+            aria-live="polite"
+            role="status"
           >
-            <span>{emailAddress}</span>
-            {copyStatus && <span className="text-sm text-neutral-400 ml-2">{copyStatus}</span>} {/* Show copy status next to email */}
-          </button>
-        </div>
+            {copyStatus}
+          </p>
+        )}
+      </div>
 
-        {/* Socials Section - Direct links */}
-        <div>
-          <h2 className="text-xl font-semibold mb-4 text-white">Find Me On</h2>
-          <div className="flex flex-wrap gap-6 justify-start"> {/* Adjusted gap */}
-            {socialLinks.map((social, index) => (
+      {/* Social Links */}
+      <div>
+        <h2 className="text-xl font-semibold text-gray-200 border-b border-gray-700 pb-2 w-max mx-auto mb-6">
+          Find Me Online
+        </h2>
+        <ul className="flex justify-center gap-12">
+          {socialLinks.map(({ name, icon, url }) => (
+            <li key={name}>
               <a
-                key={index}
-                href={social.url}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-200 group"
-                aria-label={`Link to ${social.name}`}
+                aria-label={`Link to ${name}`}
+                className="flex flex-col items-center text-gray-400 hover:text-indigo-400 transition-colors duration-300"
               >
-                {social.icon}
-                <span className="text-lg font-medium group-hover:underline">{social.name}</span>
+                {icon}
+                <span className="mt-1 text-sm font-medium select-text">{name}</span>
               </a>
-            ))}
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
