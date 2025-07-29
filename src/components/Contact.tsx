@@ -6,7 +6,7 @@ import { Mail, Github, Linkedin, Twitter, Copy } from "lucide-react";
 const Contact = () => {
   const [copyStatus, setCopyStatus] = useState("");
 
-  const emailAddress = "your.email@example.com"; // Replace with your actual email
+  const emailAddress = "midhunbabu12345@gmail.com"; 
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(emailAddress).then(() => {
@@ -16,9 +16,9 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { name: "GitHub", icon: <Github size={24} />, url: "https://github.com/yourusername" },
-    { name: "LinkedIn", icon: <Linkedin size={24} />, url: "https://linkedin.com/in/yourprofile" },
-    { name: "Twitter", icon: <Twitter size={24} />, url: "https://twitter.com/yourhandle" },
+    { name: "GitHub", icon: <Github size={24} />, url: "https://github.com/midhun0987" },
+    { name: "LinkedIn", icon: <Linkedin size={24} />, url: "https://www.linkedin.com/in/midhun-babu-0742b61a8/" },
+   // { name: "Twitter", icon: <Twitter size={24} />, url: "https://twitter.com/yourhandle" },
   ];
 
   return (

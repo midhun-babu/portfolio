@@ -4,19 +4,25 @@ const About = () => {
   return (
     <div className="max-w-prose mx-auto text-gray-300 leading-relaxed px-4 sm:px-0">
       <p className="mb-4 text-sm">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam iusto odit doloremque
-        suscipit eaque minus quidem! Explicabo sapiente rerum id distinctio, similique ad minus
-        laboriosam officiis corporis, odit nihil consequuntur, quod laudantium quibusdam deleniti.
+        As a second-year MCA student, I am deeply passionate about technology
+        and constantly strive to expand my knowledge in cutting-edge fields. My
+        journey so far has been driven by curiosity and a desire to turn
+        innovative ideas into reality, which has pushed me to explore many
+        aspects of computer science and technology.
       </p>
       <p className="mb-4 text-sm">
-        Molestiae, ducimus harum consequuntur aspernatur eligendi maiores dolorum, beatae id
-        voluptas, tenetur voluptatum aliquam odit a corporis. Magni sequi aut incidunt quasi ad
-        obcaecati sint labore itaque nemo esse numquam, ab nihil quaerat facere debitis aliquam vel
-        sit quo quam aliquid, inventore molestiae voluptate!
+        I have hands-on experience in web development, specializing in Python
+        and Django. Through building various projects, I’ve honed my skills in
+        creating robust, scalable web applications. My foundation also extends
+        to data science, where I use Python to analyze data, derive insights,
+        and solve real-world problems efficiently.
       </p>
       <p className="text-sm">
-        Eveniet blanditiis minima odio itaque possimus, ad placeat, rerum vel ea eos quae,
-        officiis architecto aut eligendi veritatis accusamus? Nam, repellendus dolores.
+        Recently, I have developed an interest in Generative AI, exploring how
+        intelligent systems can create novel content and solutions. Eager to
+        contribute to impactful projects in the tech industry, I’m looking
+        forward to applying my technical skills, creativity, and enthusiasm to
+        deliver value and drive meaningful change in future roles.
       </p>
     </div>
   );

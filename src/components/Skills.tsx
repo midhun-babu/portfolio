@@ -3,7 +3,7 @@ import { Card, CardContent } from "./ui/card";
 import {
   Code,
   Database,
-  Settings,
+  Settings,   // Using Settings icon for TypeScript
   Cloud,
   GitBranch,
   Terminal,
@@ -15,17 +15,14 @@ import {
 
 const skills = [
   { name: "JavaScript", icon: Code },
-  { name: "React", icon: Layers },
-  { name: "Node.js", icon: Settings },
+  // React removed
   { name: "MongoDB", icon: Database },
-  { name: "Tailwind", icon: Layers },
+  { name: "TypeScript", icon: Settings },
   { name: "Git", icon: GitBranch },
   { name: "Python", icon: Terminal },
-  { name: "Docker", icon: Cloud },
-  { name: "Firebase", icon: ShieldCheck },
-  { name: "AWS", icon: Cloud },
-  { name: "TypeScript", icon: Code },
-  { name: "GraphQL", icon: Database },
+  { name: "PHP", icon: Code },
+  { name: "C", icon: Terminal },
+  { name: "Django", icon: ShieldCheck },
   { name: "Next.js", icon: Zap },
   { name: "SQL", icon: Server },
 ];
