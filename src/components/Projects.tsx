@@ -20,7 +20,7 @@ const projectsData = [
   {
     title: "IMS (inventory management)",
     description:
-      "Developed an inventory management application with real-time stock tracking and centralized control,enabling users to monitor and update inventory across multiple locations collaboratively.",
+      "Inventory management app for real-time stock tracking and multi-location control.",
     githubLink: "https://github.com/midhun0987/microproject",
     liveLink: "https://project-beta.netlify.app/",
   },
@@ -28,7 +28,7 @@ const projectsData = [
     title: "Loading...",
     description:
       "Fresh and groundbreaking projects are on the horizon. Keep an eye out for upcoming innovations!",
-    githubLink:null,
+    githubLink: null,
     liveLink: null,
   },
   {
