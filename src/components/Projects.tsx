@@ -14,14 +14,14 @@ const projectsData = [
     title: "Trip- Finder",
     description:
       "Trip Finder is a user-friendly travel platform that helps users plan, book, and manage their trips with ease,offering personalized recommendations and real-time updates.",
-    githubLink: "https://github.com/midhun0987/TripFinder",
+    githubLink: "https://github.com/midhun-babu/TripFinder",
     liveLink: "https://project-alpha.vercel.app/",
   },
   {
     title: "IMS (inventory management)",
     description:
       "Inventory management app for real-time stock tracking and multi-location control.",
-    githubLink: "https://github.com/midhun0987/microproject",
+    githubLink: "https://github.com/midhun-babu/microproject",
     liveLink: "https://project-beta.netlify.app/",
   },
   {

@@ -16,7 +16,7 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { name: "GitHub", icon: <Github size={24} />, url: "https://github.com/midhun0987" },
+    { name: "GitHub", icon: <Github size={24} />, url: "https://github.com/midhun-babu" },
     { name: "LinkedIn", icon: <Linkedin size={24} />, url: "https://www.linkedin.com/in/midhun-babu-0742b61a8/" },
    // { name: "Twitter", icon: <Twitter size={24} />, url: "https://twitter.com/yourhandle" },
   ];
