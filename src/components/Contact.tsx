@@ -22,7 +22,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="max-w-md mx-auto px-4 sm:px-0 font-sans text-gray-300">
+    <div className="max-w-md mx-auto  sm:px-0 font-sans text-gray-300">
       {/* Email Section */}
       <div className="mb-10 text-center">
         <button
@@ -33,7 +33,7 @@ const Contact = () => {
                      transition-colors duration-300 cursor-pointer"
           type="button"
         >
-          <Mail size={24} className="text-gray-400 group-hover:text-indigo-400 transition-colors duration-300" />
+          <Mail size={20} className="text-gray-400 group-hover:text-indigo-400 transition-colors duration-300" />
           <span className="text-lg font-medium text-white select-text">{emailAddress}</span>
           <Copy size={20} className="text-gray-400 group-hover:text-indigo-400 transition-colors duration-300" />
         </button>
