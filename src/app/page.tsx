@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  // Simple fade-in animation hook
+  
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const timer = setTimeout(() => setLoaded(true), 100);
